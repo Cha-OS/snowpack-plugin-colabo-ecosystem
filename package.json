@@ -34,5 +34,8 @@
     "@pika/plugin-ts-standard-pkg": "^0.9.2",
     "snowpack": "^2.7.5",
     "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "@colabo-flow/i-core": "file:../../../../isomorphic/dev_puzzles/flow/core"
   }
 }

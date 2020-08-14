@@ -11,7 +11,8 @@ const plugin: SnowpackPluginFactory = () => {
       if([ '.html', '.css', '.png' ].indexOf(fileExt) >= 0) return null;
 
       if(['.js' ].indexOf(fileExt) >= 0){
-        let contentsNew:string = `/* Welcome to Colabo Transformation: https://github.com/Cha-OS/snowpack-plugin-colabo-ecosystem ! */ \r\n ${contents}`;
+        // let contentsNew:string = `/* Welcome to Colabo Transformation: https://github.com/Cha-OS/snowpack-plugin-colabo-ecosystem ! */ \r\n ${contents}`;
+        let contentsNew:string = contents.toString();
          
         const searchColaboPuzzleRegExp = /[\"\'](\@colabo\-[^\"\']+)[\"\']/g;
         // const replaceWithColaboPrefix = '/COLABO_PUZZLES/@colabo-';
