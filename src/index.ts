@@ -14,10 +14,17 @@ const plugin: SnowpackPluginFactory = () => {
         // let contentsNew:string = `/* Welcome to Colabo Transformation: https://github.com/Cha-OS/snowpack-plugin-colabo-ecosystem ! */ \r\n ${contents}`;
         let contentsNew:string = contents.toString();
          
+        // @colabo
         const searchColaboPuzzleRegExp = /[\"\'](\@colabo\-[^\"\']+)[\"\']/g;
         // const replaceWithColaboPrefix = '/COLABO_PUZZLES/@colabo-';
         const replaceWithColaboPrefix = '"/COLABO_PUZZLES/$1/index.js"';
         contentsNew = contentsNew.replace(searchColaboPuzzleRegExp, replaceWithColaboPrefix);
+
+        // @litterra-
+        const searchLitterraPuzzleRegExp = /[\"\'](\@litterra\-[^\"\']+)[\"\']/g;
+        const replaceWithLitterraPrefix = '"/COLABO_PUZZLES/$1/src/index.js"';
+        contentsNew = contentsNew.replace(searchLitterraPuzzleRegExp, replaceWithLitterraPrefix);
+
         // console.log("[@colabo/snowpack-plugin-colabo-ecosystem::transform] transformed: contentsNew: %s", contentsNew);
         return contentsNew;
       }
