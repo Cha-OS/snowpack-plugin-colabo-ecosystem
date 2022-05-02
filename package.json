@@ -16,8 +16,7 @@
     "deploy": "pika publish",
     "version": "npm run build"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "dist/index.ts",`
   "@pika/pack": {
     "pipeline": [
       [
